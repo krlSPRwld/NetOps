@@ -1,3 +1,0 @@
----
-- template: src=../nxos/common.j2 dest=configs/{{inventory_hostname}}.txt
-  name: create configuration for Nexus devices

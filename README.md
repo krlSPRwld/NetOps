@@ -5,6 +5,7 @@ This repository contains sources for excercises generated during the
 
 ## Subdirectories 
 * Ansible: Ansible playbooks
+* topology: Overview over the used topology
 
 ## Installation
 

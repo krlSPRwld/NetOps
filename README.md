@@ -9,14 +9,7 @@ This repository contains sources for excercises generated during the
 
 ## Installation
 
-I'm running Ansible in a Ubuntu box. 
+I'm running Ansible in an virtual Ubuntu box on VMware ESXi Server. On the same server I installed the VIRL thing and extended it with a flat network connecting to the Ubuntu box. 
 
 The networking examples are focused on Cisco IOS and Nexus OS. I run them in VIRL with a set up topology as described in [topology](topology/README.md). They are built for this particular setup consisting of two csr1000v Routers and two nx-osv switches running on VIRL.
-
-## Usage
-
-Download, explore & enjoy... 
-
-* [Ansible for Networking Engineers](http://www.ipspace.net/Ansible_for_Networking_Engineers) online course ([contents](https://my.ipspace.net/bin/list?id=AnsibleOC)) or
-* [Building Network Automation Solutions](http://www.ipspace.net/Building_Network_Automation_Solutions) online course ([contents](https://my.ipspace.net/bin/list?id=NetAutSol))
 

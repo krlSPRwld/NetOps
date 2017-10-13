@@ -1,7 +1,7 @@
 # Network Automation Workshop - Topology
 
 This repository contains sources for excercises generated during the
-[Network Automation workshop](http://www.ipspace.net/NetAutWS)
+[Building Network Automation Solutions](http://automation.ipspace.net/Main_Page) Online Course.
 
 ## Installation
 

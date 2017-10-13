@@ -20,9 +20,9 @@ object | hostname | loopback ip
 csr1000v-1 | r1 | 192.168.0.254
 csr1000v-1 | r2 | 192.168.0.253
 nx-osv-1 | s1 | 192.168.0.1
-nx-osv-2 | s2 | 292.268.0.2
-nx-osv-3 | s3 | 392.368.0.3
-nx-osv-4 | s4 | 492.468.0.4
+nx-osv-2 | s2 | 192.168.0.2
+nx-osv-3 | s3 | 192.168.0.3
+nx-osv-4 | s4 | 192.168.0.4
 
 Here is a Picture of the VIRL topology.
 

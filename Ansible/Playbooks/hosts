@@ -1,0 +1,6 @@
+r1.hallowe.en ansible_os=ios
+r2.hallowe.en ansible_os=ios
+s1.hallowe.en ansible_os=nxos
+s2.hallowe.en ansible_os=nxos
+s3.hallowe.en ansible_os=nxos
+s4.hallowe.en ansible_os=nxos

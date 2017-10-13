@@ -10,7 +10,7 @@ This repository contains sources for excercises generated during the
 
 I'm running Ansible in a Ubuntu box. 
 
-The networking examples are focused on Cisco IOS and Nexus OS. I run them in VIRL with a set up topology as described in [topology.md](https://github.com/krlSPRwld/NetOps/topology.md). They are built for this particular setup consisting of two csr1000v Routers and two nx-osv switches running on VIRL.
+The networking examples are focused on Cisco IOS and Nexus OS. I run them in VIRL with a set up topology as described in [topology](https://github.com/krlSPRwld/NetOps/topology/README.md). They are built for this particular setup consisting of two csr1000v Routers and two nx-osv switches running on VIRL.
 
 ## Usage
 

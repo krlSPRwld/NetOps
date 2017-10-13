@@ -26,6 +26,6 @@ nx-osv-4 | s4 | 492.468.0.4
 
 Here is a Picture of the VIRL topology.
 
-![Lab Topology for Automation Course](https://github.com/krlSPRwld/NetOps/topology/TOPOLOGY.png)
+![Lab Topology for Automation Course](TOPOLOGY.png)
 
 

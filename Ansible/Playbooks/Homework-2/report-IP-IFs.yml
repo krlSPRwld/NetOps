@@ -1,0 +1,32 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: delete old files and directroy
+    local_action: file path=results state=absent
+    run_once: true
+  - name: create directory for new files
+    local_action: file path=results state=directory
+    run_once: true
+
+- hosts: nxos
+  vars:
+    hosttype: nxos
+  tasks:
+  - name: read facts from nx-os devices
+    nxos_facts: provider="{{nxapi}}"
+    register: facts
+  - name: write facts to file
+    template: src=templates/NOC-Report-Template.j2 dest=results/{{inventory_hostname}}_v4_addresses.html
+
+- hosts: ios
+  vars:
+    hosttype: ios
+  tasks:
+  - name: read facts from ios devices
+    ios_facts: provider="{{cli}}"
+    register: facts
+  - name: write facts to file
+    template: src=templates/NOC-Report-Template.j2 dest=results/{{inventory_hostname}}_v4_addresses.html
+

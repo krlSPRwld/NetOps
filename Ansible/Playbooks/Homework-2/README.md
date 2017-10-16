@@ -14,6 +14,6 @@ The playbook is run from the parent Ansible directory with the following command
 ## What it does
 
 The playbook first executes filetasks, removing the entire results directory and recreates it.
-Afterwards it checks for ansible.cfg and finds the reference for the inventory to ./hosts containing two groups, one for nx-os based hosts and another for gear running on ios. Please take a look at the [topology-overview](../topology/README.md) to understand the [results](results). Now facts are gathered by nxos_facts and ios_facts modules and html report files are written using a jinja2 template located in [templates](templates).
+Afterwards it checks for ansible.cfg and finds the reference for the inventory to ./hosts containing two groups, one for nx-os based hosts and another for gear running on ios. Please take a look at the [topology-overview](../../../topology/README.md) to understand the [results](results). Now facts are gathered by nxos_facts and ios_facts modules and html report files are written using a jinja2 template located in [templates](templates).
 
 Feel free to explore, modify and reuse! 

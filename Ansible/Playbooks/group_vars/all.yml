@@ -1,3 +1,16 @@
 ---
 ansible_user: cisco
 ansible_ssh_pass: cisco
+
+spine_as_pre: 429429
+
+leaf_as_pre: 429430
+
+v6_lo_pre: fd91:ac7b:bef8
+v6_p2p_pre: fd8a:5b8c:3d04
+
+v4_lo_pre: 192.168.0
+
+spine_start_int: 4
+leaf_start_int: 1
+leaf_linecard: 2

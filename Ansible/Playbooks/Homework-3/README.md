@@ -5,13 +5,15 @@ This repository contains sources for excercises generated during the
 
 ## What is to be solved with that
 
-What I try to solve with this data model is the initial setup of a data center fabric with numbering of the fabric connecting interfaces, the numbering of loopback interfaces, and selecting the right BGP autonomous system number for each machine participating in the fabric according to its role. I tried to solve this by defining some group specific variables in [group_vars/all.yml](group_vars/all.yml). Here we have some prefixes (not network prefixes in its common understanding, but prefixes to be automaticaly extended during provisioning), as the digits prepended to the AS number, the IPv6 part which prepends the network addresses and so on. Just take a look at the yaml file, I think it would be self explaining.
+What I try to solve with this data model is the initial setup of a data center fabric with numbering of the fabric connecting interfaces, the numbering of loopback interfaces, and selecting the right BGP autonomous system number for each machine participating in the fabric according to its role. I tried to solve this by defining some group specific variables in [group_vars/all.yml](../group_vars/all.yml). Here we have some prefixes (not network prefixes in its common understanding, but prefixes to be automaticaly extended during provisioning), as the digits prepended to the AS number, the IPv6 part which prepends the network addresses and so on. Just take a look at the yaml file, I think it would be self explaining.
 
-In addition to the gorup_vars, I only use the host inventory in [hosts](hosts) and try to get all the information needed from the hostnames, e.g. r1.hallowe.en has the information "r", which is used in the template to determine a spine system, and "1", for the first system of that type.
+In addition to the gorup_vars, I only use the host inventory in [hosts](../hosts) and try to get all the information needed from the hostnames, e.g. r1.hallowe.en has the information "r", which is used in the template to determine a spine system, and "1", for the first system of that type.
 
 All the rest will be calculated from the host count of the specific type. Output will be the "facts" generated, not a valid configuration file or something. But, for demonstation purpose, this should hopefully be enough.
 
-See this small sketch for a better understanding on how the fabric is inteded to be set up and numbered: [DC-Layout](DC-Layout.jpg)
+See this small sketch for a better understanding on how the fabric is inteded to be set up and numbered:
+
+![DC-Layout](DC-Layout.jpg)
 
 ## Subdirectories 
 * templates: contains jinja2 template for generating the addressing for each host.

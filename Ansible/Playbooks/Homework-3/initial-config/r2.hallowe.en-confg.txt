@@ -1,0 +1,19 @@
+===========================================================================
+r2.hallowe.en
+===========================================================================
+Number of Spines: 2
+Number of Leaves: 4
+	        								
+			
+			
+			
+		
+Hostname: r2
+Domainname: hallowe.en
+System Type: spine
+Autonomous System Number: 42942920000
+IPv4 Loopback Address: 192.168.0.253/32
+IPv6 Loopback Address: fd91:ac7b:bef8::fd/128
+IPv6 Peer Links: [u'fd8a:5b8c:3d04:102::253/64', u'fd8a:5b8c:3d04:202::253/64', u'fd8a:5b8c:3d04:302::253/64', u'fd8a:5b8c:3d04:402::253/64']
+
+

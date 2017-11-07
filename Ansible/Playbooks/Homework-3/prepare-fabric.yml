@@ -1,0 +1,26 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: delete old files and directroy
+    local_action: file path=initial-config state=absent
+    run_once: true
+  - name: create directory for new files
+    local_action: file path=initial-config state=directory
+    run_once: true
+
+- hosts: nxos
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: generate facts from hostname
+    template: src=templates/fabric-template.j2 dest=initial-config/{{inventory_hostname}}-confg.txt
+       
+- hosts: ios
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: generate facts from hostname
+    template: src=templates/fabric-template.j2 dest=initial-config/{{inventory_hostname}}-confg.txt
+ 

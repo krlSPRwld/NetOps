@@ -1,0 +1,42 @@
+===========================================================================
+{{ inventory_hostname }}
+===========================================================================
+{% set v6_p2p = [] %}
+{% set spines = groups['all'] | string | regex_findall('(r\d+)\.') %}
+{% set leaves = groups['all'] | string | regex_findall('(s\d+)\.') %}
+Number of Spines: {{ spines | count }}
+Number of Leaves: {{ leaves | count }}
+{% set domainname = inventory_hostname | regex_replace('^\w+\d+\.(.*)$', '\\1') %}
+{% set hostname = inventory_hostname | regex_replace('^(\w+\d+)\..*$', '\\1') %}
+{% set sysnumber = hostname | regex_replace('\w+(\d+)', '\\1') | int %}
+{% if hostname in leaves %}
+	{% set type = "leaf" %}
+	{% set asn = leaf_as_pre | string + "%04d" | format(sysnumber) | string %}
+	{% set asn = "%10s" | format(asn) %}
+	{% set v4_lo = v4_lo_pre + "." + sysnumber | string + "/32" %}
+	{% set v6_lo = v6_lo_pre + "::" + "%x" | format(sysnumber) | string + "/128" %}
+        {% for spine in spines %}
+                {{ v6_p2p.append(v6_p2p_pre + ":" + "%x" | format(sysnumber) | string + "%02x" | format(loop.index) | string + "::" + sysnumber | string + "/64") }}
+        {% endfor %}
+{% endif %}
+{% if hostname in spines %}
+	{% set spineid = sysnumber %}
+        {% set sysnumber = 255 - sysnumber %}
+	{% set type = "spine" %}
+	{% set asn = spine_as_pre | string + spineid | string + "%04d" | format(0) | string %}
+	{% set v4_lo = v4_lo_pre + "." + sysnumber | string + "/32" %}
+	{% set v6_lo = v6_lo_pre + "::" + "%x" | format(sysnumber) | string + "/128" %}
+	{% set v6_p2p = [] %}
+	{% for leave in leaves %}
+		{{ v6_p2p.append(v6_p2p_pre + ":" + "%x" | format(loop.index) | string + "%02x" | format(spineid) | string + "::" + sysnumber | string + "/64") }}
+	{% endfor %}	
+{% endif %}
+Hostname: {{ hostname }}
+Domainname: {{ domainname }}
+System Type: {{ type }}
+Autonomous System Number: {{ asn }}
+IPv4 Loopback Address: {{ v4_lo }}
+IPv6 Loopback Address: {{ v6_lo }}
+IPv6 Peer Links: {{ v6_p2p }}
+
+

@@ -1,0 +1,16 @@
+===========================================================================
+s1.hallowe.en
+===========================================================================
+Number of Spines: 2
+Number of Leaves: 4
+					                        
+                        
+        Hostname: s1
+Domainname: hallowe.en
+System Type: leaf
+Autonomous System Number: 4294300001
+IPv4 Loopback Address: 192.168.0.1/32
+IPv6 Loopback Address: fd91:ac7b:bef8::1/128
+IPv6 Peer Links: [u'fd8a:5b8c:3d04:101::1/64', u'fd8a:5b8c:3d04:102::1/64']
+
+

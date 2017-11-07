@@ -1,0 +1,16 @@
+===========================================================================
+s3.hallowe.en
+===========================================================================
+Number of Spines: 2
+Number of Leaves: 4
+					                        
+                        
+        Hostname: s3
+Domainname: hallowe.en
+System Type: leaf
+Autonomous System Number: 4294300003
+IPv4 Loopback Address: 192.168.0.3/32
+IPv6 Loopback Address: fd91:ac7b:bef8::3/128
+IPv6 Peer Links: [u'fd8a:5b8c:3d04:301::3/64', u'fd8a:5b8c:3d04:302::3/64']
+
+
